@@ -1,7 +1,7 @@
-#include <stdio.h>
 #include <stdlib.h>
+#include <string.h>
 #include <stdio.h>
-#include <lists.h>
+#include "lists.h"
 /**
  * main - checks the code
  * Return: always 0
@@ -19,8 +19,8 @@ if (new == NULL)
 printf("Error\n");
 return (1);
 }
+new->n = 9;
 new->next = head;
-head = new;
 n = print_listint(head);
 printf("-> %lu elements\n", n);
 free(new);
